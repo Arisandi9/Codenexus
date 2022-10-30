@@ -14,7 +14,10 @@ tags:
 - javascript
 year: "{{ dateFormat "2006" .Date }}"
 month: "{{ dateFormat "2006/01" .Date }}"
-
+cover:
+    image: "/img/1.jpg"
+    alt: 'First post' 
+    caption: "first post"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

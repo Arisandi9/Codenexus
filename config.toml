@@ -22,4 +22,15 @@ keywords = "codenexus, programing, tech,css,html"
  month = "/posts/:slug/"
 
  Paginate = 10
+
+ [related]
+    threshold = 10.0
+    includeNewer = false
+    toLower = false
+    [[related.indices]]
+    name = "tags"
+    weight = 100.0
+    [[related.indices]]
+    name = "date"
+    weight = 5.0
  

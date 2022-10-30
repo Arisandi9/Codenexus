@@ -1,0 +1,16 @@
+<section class="related">
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h3>Related pages</h3>
+    <ul class="list-unstyled">
+        {{ range . }}
+        <li class="position-relative">
+            <a href="{{ .RelPermalink }}" class=" relate-title text-decoration-none">{{ .Title }}</a>
+            <img src="{{.Params.cover.image}}" alt="{{.Params.cover.alt}}" class="relate-img">
+
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+</section>

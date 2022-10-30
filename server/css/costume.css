@@ -11,7 +11,7 @@ body {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
-   
+   background-color: red;
 }
 
 img {
@@ -45,23 +45,6 @@ nav li {
 article  p{
     font-family: 'roboto';
 }
-/* aside */
-.relate-title {
-    font-size: 1.2rem;
-    font-weight: semibold;
-    display: block;
-    padding:.2rem .5rem;
-    background-color: var(--primary-color);
-    /* width: max-content; */
-    border-radius: 10px 10px 0 0 ;
-    color:white;
-
-}
-
-.relate-img {
-    object-fit: cover;
-    height: 5rem;
-}
 
 /* search */
 
@@ -94,8 +77,7 @@ hr{
 /* post */
 
 .post-title {
-    font-size: clamp(2rem,2vw,1.5rem)
-    
+    color:blue;
 }
 
 
@@ -132,13 +114,4 @@ footer {
     nav .search-container{
         display: none;
     }
-
-    /* aside */
-    .relate-title {
-        font-size: 1.5rem;
-    }
-    .relate-img {
-        height: 10rem;
-    }
-    
 }

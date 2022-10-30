@@ -1,21 +1,20 @@
+{{ define "main" }}
+<section>
+    {{ .Content }}
+</section>
 
-    {{ define "main" }}
-    <section>
-        {{ .Content }}
-    </section>
 
-    <section class="Post Terbaru">
-        <h2>Post terbaru</h2>
-        <ul>
-            {{ range .Pages }}
-            <li>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    {{.Page.Description}}
-    </section>
-    
-     
-    {{ end }}
 
+<section class="Post Terbaru">
+    <span class="fs-1 fw-semibold">Post terbaru</span>
+    <hr>
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+        {{ range first 3 (where .Site.RegularPages "Type" "in" "posts") }}
+        {{ partial "post-summary.html" . }}
+        {{ end }}
+    </div>
+
+</section>
+
+{{end}}

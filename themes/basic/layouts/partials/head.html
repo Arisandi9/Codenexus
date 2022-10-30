@@ -9,35 +9,29 @@
     {{.Site.Params.description}}
     {{- end -}}">
     <meta name="keywords" content="
-{{- with .Page.Keywords}}
+{{- with delimit .Page.Keywords ","}}
             {{.}}
         {{- else -}}
             {{.Site.Params.keywords}}
-        {{- end -}}" >
-    {{ range .AlternativeOutputFormats -}}
-    {{- $link := `<link rel="%s" type="%s" href="%s" title="%s">` -}}
-    {{- $title := printf "%s - %s" $.Page.Title $.Site.Title -}}
-    {{- if $.Page.IsHome -}}
-    {{ $title = $.Site.Title }}
-    {{- end -}}
-    {{ printf $link .Rel .MediaType.Type .Permalink $title | safeHTML }}
-    {{- end }}
+        {{- end -}}">
+
 
     <title>
         {{- if .Page.IsHome -}}
-            {{.Site.Title}}
+        {{.Site.Title}}
         {{- else -}}
-            {{.Title}} - {{.Site.Title}}
+        {{.Title}} - {{.Site.Title}}
         {{- end -}}
     </title>
-    
-    
+
+
     <link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
     <link rel="stylesheet" href="{{"css/bootstrap-icons.css" | relURL}}">
     <link rel="stylesheet" href="{{ "css/costume.css" | relURL }}">
-    
-  
-    
+    <link rel="stylesheet" href="/css/costume.css">
+
+
+
 
 
 </head>

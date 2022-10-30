@@ -1,14 +1,20 @@
-<article>
-    <header>
-        <h3>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
-        <time>
-            {{ .Date | dateFormat "January" }}
-            {{ .Date | dateFormat "2" }}
-        </time>
-    </header>
+<article class="my-3">
+    <div class="post-img position-relative">
+        <img src="{{.Params.cover.image}}" alt="{{.Params.cover.alt}}" class="aspect-ratio--16x9">
+        <span class="position-absolute start-0 badge badge-">{{.Params.label}}</span>
+    </div>
+    <h2 class="my-2  ">
+        <a href="{{ .RelPermalink }}" class="text-black text-decoration-none">{{ .Title }}</a>
+    </h2>
+    <time class="badge bg-secondary fs-6 bg-black mb-2">
+        {{ .Date | dateFormat "January" }}
+        {{ .Date | dateFormat "2" }}
+    </time>
 
     {{.Summary}}
-       
+
+
+    <a href="{{ .RelPermalink }}" role="button" class="btn btn-sm btn-outline-dark">Read More</a>
+
+
 </article>
