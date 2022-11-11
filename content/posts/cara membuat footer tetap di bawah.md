@@ -16,7 +16,7 @@ tags:
 year: "2022"
 month: "2022/11"
 cover:
-    image: "(/img/footer-tetap-dibawah/thumbnail.jpg"
+    image: "/img/footer-tetap-dibawah/thumbnail.jpg"
     alt: 'cara membuat footer tetap di bawah' 
 ---
 
