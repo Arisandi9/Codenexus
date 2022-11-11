@@ -1,8 +1,8 @@
 <section class="related">
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}
-    <h3>Related pages</h3>
-    <ul class="list-unstyled">
+    <h3 class="text-center">Related pages</h3>
+    <ul class="list-unstyled d-flex gap-3 flex-column">
         {{ range . }}
         <li class="position-relative">
             <a href="{{ .RelPermalink }}" class=" relate-title text-decoration-none">{{ .Title }}</a>

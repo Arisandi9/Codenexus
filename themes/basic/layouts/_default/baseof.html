@@ -3,19 +3,31 @@
     {{- partial "head.html" . -}}
     <body style="background: white;">
             {{- partial "header.html" . -}}
-            <div id="content" class="container" style="margin-top: 12vh;" >
-                <div class="row">
-                    <main class="col-12 col-md-8">
+            
+            {{ if .IsHome}}
+                {{- partial "hero.html" . -}}
+            {{ end }}
+            <div id="content" class="container"  style="margin-top: 12vh;">
+                <div class="row justify-content-center">
+                    {{ if .IsHome }}
+                        <main class="col-12 ">
+                    {{ else }}
+                        <main class="col-12 col-md-8">
+                    {{ end }}
                         {{- block "main" . }}{{- end }}
                     </main>
-                    <aside class="col-12 col-md-3">
+                    {{ if ne .IsHome true }}
+                    <aside class="mt-4 col-12 col-md-3 ">
+             
                         {{- partial "aside_post.html" . -}}
                     </aside>
+                    {{ end }}
                 </div>
             </div>
             {{- partial "footer.html" . -}}
 
             <script src="{{"js/bootstrap.bundle.min.js" | relURL}}"></script>
-            <script src="{{"js/script.js" | relURL}}"></script>
+            
+
     </body>
 </html>

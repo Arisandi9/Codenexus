@@ -1,8 +1,13 @@
 {{define "main"}}
-    <h2>title</h2>
-    <input type="search" id="searchField">
-    <button id="searchButton">Search</button>
-    <div id="output">
-    <p>Waiting for search input</p>
 
+     
+   
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" id="searchField">
+        <button class="btn btn-success btn-sm border-0" type="submit" id="searchButton">Search</button>
+    
+    <h2 class="mt-4">Hasil Pencarian </h2>
+    
+    <script src="/js/search.js"></script>
+    <script src="//unpkg.com/lunr@2.3.6/lunr.js"></script>
+    <script src="//unpkg.com/axios@0.19.0/dist/axios.js"></script>
 {{end}}

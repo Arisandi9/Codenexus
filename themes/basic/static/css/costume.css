@@ -1,5 +1,5 @@
 :root {
-    --primary-color: crimson;
+    --primary-color: #f2303a;
     --primary-btn : rgb(071,001,005);
     --font-base : 'poppins';
 
@@ -7,15 +7,19 @@
 
 body {
     font-family: var(--font-base);
-   ;
    display: flex;
    flex-direction: column;
    min-height: 100vh;
+   background-color: rgb(43, 220, 20);
    
 }
 
 img {
     width:100%;
+}
+
+hr{
+    height: 12px;
 }
 
 .bg-light {
@@ -40,14 +44,42 @@ nav li {
     background-color: #fff;
 }
 
+/* hero */
+.hero {
+    background-image: url(/img/hero.png);
+    height: 90vh;
+    display: grid;
+    color:white;
+    place-content: center;
+    background-repeat: repeat-x;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+}
+
+.hero > * {
+    transform: translateY(-4rem);
+}
+
+.hero > .hero-title {
+    font-size: clamp(3rem,2vw,5rem);
+}
+
+.hero > .hero-subtitle {
+    font-style: italic;
+}
+
 /* paragrap */
 
 article  p{
     font-family: 'roboto';
 }
+
+
 /* aside */
 .relate-title {
     font-size: 1.2rem;
+    overflow-wrap: break-word;
     font-weight: semibold;
     display: block;
     padding:.2rem .5rem;
@@ -66,35 +98,19 @@ article  p{
 /* search */
 
 
- .search-mobile {
-    position:absolute;
-    top:-5%;
-    left:-800%;
-    opacity:0;
-    transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    pointer-events: none;
-    
-}
-.show-menu-mobile{
-    pointer-events: auto;
-     top:170%;
-     opacity: 1;
-}
 
-nav input[type='search'] {
-    width:5rem;
-}
 
-hr{
-    height: 12px;
-}
 
-/* content */
+
+
+
+
 
 /* post */
 
 .post-title {
-    font-size: clamp(2rem,2vw,1.5rem)
+    font-size: clamp(1.8rem,2vw,2rem);
+    overflow-wrap: break-word
     
 }
 
@@ -114,19 +130,16 @@ footer {
 }
 
 
-/* hiden item */
 .search-icon-mobile{
-    display: none;
+    display: block;
 }
+
 
 @media screen and (max-width:992px) {
     nav .active::after{
         display:none;
     }
 
-    .search-icon-mobile{
-        display: block;
-    }
 
     /* hidden-item */
     nav .search-container{
@@ -139,6 +152,10 @@ footer {
     }
     .relate-img {
         height: 10rem;
+    }
+    /* hero */
+    .hero {
+        height: 60vh;
     }
     
 }
