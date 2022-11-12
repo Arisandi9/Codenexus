@@ -8,10 +8,8 @@ categories:
 - news
 - Programing
 - tips&trick
-- css
 tags:
-- css
-- html
+- react
 - javascript
 year: "2022"
 month: "2022/11"
