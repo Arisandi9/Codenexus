@@ -4,10 +4,10 @@ title = 'CodeNexus'
 theme = "basic"
 disqusShortname = "Codenexus"
 enableRobotsTXT = true
-sitemap:
-  changefreq: always
-  filename: sitemap.xml
-  priority: 0.5
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 
 [params]
