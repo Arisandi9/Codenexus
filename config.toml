@@ -3,7 +3,11 @@ languageCode = 'en-us'
 title = 'CodeNexus'
 theme = "basic"
 disqusShortname = "Codenexus"
-enableRobotsTXT: true
+enableRobotsTXT = true
+sitemap:
+  changefreq: always
+  filename: sitemap.xml
+  priority: 0.5
 
 
 [params]
